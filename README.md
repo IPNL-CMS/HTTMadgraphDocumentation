@@ -174,17 +174,17 @@ Block mass
 
 Here are some comments about the values set in the `run_card`:
 
-** `nevents`: Specify the number of unweighted events you want to generate
+    * `nevents`: Specify the number of unweighted events you want to generate
 
-** `ebeam1(2)`: Set total energy for beam 1 (2) (6500 GeV each for sqrt(s) = 13 TeV)
+    * `ebeam1(2)`: Set total energy for beam 1 (2) (6500 GeV each for sqrt(s) = 13 TeV)
 
-** `lhaid`: LHAPDF ID, which can be found [here](https://www.hepforge.org/archive/lhapdf/pdfsets/6.1.6/pdfsets.index) or in `myWorkingArea/share/LHAPDF/pdfsets.index`
+    * `lhaid`: LHAPDF ID, which can be found [here](https://www.hepforge.org/archive/lhapdf/pdfsets/6.1.6/pdfsets.index) or in `myWorkingArea/share/LHAPDF/pdfsets.index`
 
-** `dynamical_scale_choice`: has to be set to 2 to have the sum of signal (S) cross-section and interference (i) cross-section equal to (S+i) cross-section, i.e  (S+i) = (S)+(i). See [bug report](https://bugs.launchpad.net/mg5amcnlo/+bug/1449395) for more details.
+    * `dynamical_scale_choice`: has to be set to 2 to have the sum of signal (S) cross-section and interference (i) cross-section equal to (S+i) cross-section, i.e  (S+i) = (S)+(i). See [bug report](https://bugs.launchpad.net/mg5amcnlo/+bug/1449395) for more details.
 
-** `maxjetflavor`: if set to 5, then b mass has to be set to 0 (see [here]( https://twiki.cern.ch/twiki/bin/viewauth/CMS/QuickGuideMadGraph5aMCatNLO)). These values, as well as the one for `xqcut`, has an impact in case you want to generate extra jets.
+    * `maxjetflavor`: if set to 5, then b mass has to be set to 0 (see [here]( https://twiki.cern.ch/twiki/bin/viewauth/CMS/QuickGuideMadGraph5aMCatNLO)). These values, as well as the one for `xqcut`, has an impact in case you want to generate extra jets.
 
-** `use_syst`: has to be set to `True` to enable systematics studies with SystCalc
+    * `use_syst`: has to be set to `True` to enable systematics studies with SystCalc
 
 - Running Madevent
 
