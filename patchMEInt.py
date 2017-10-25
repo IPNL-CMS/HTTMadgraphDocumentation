@@ -105,6 +105,14 @@ if __name__ == '__main__':
                 outFile.write('{s}{c}=-{c}\n'.format(s=spacing, c=couplingName))
                 outFile.write('{}T=5D-1*(T-{})\n'.format(spacing, meCall))
                 outFile.write('{s}{c}=-{c}\n'.format(s=spacing, c=couplingName))
+                
+                nMEPatches += 1
+        
+        if nMEPatches != 2:
+            raise RuntimeError(
+                'In file "{}" found {} places in which the squared matrix element is evaluated '
+                'while 2 places expected.'.format(srcFileName, nMEPatches)
+            )
         
         
         srcFile.close()
